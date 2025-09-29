@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-carrito-listar',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: '/carrito-listar.html',
+  templateUrl: './carrito-listar.html',
   styleUrl: './carrito-listar.css'
 })
 export class CarritoListar implements OnInit{
