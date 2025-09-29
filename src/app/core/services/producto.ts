@@ -5,6 +5,7 @@ import { Producto } from '../modelo/producto';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductoService {
   
     private http = inject(HttpClient);

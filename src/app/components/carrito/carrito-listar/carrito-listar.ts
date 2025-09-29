@@ -3,6 +3,7 @@ import { CarritoService } from '../../../core/services/carrito';
 import { Carrito } from './../../../core/modelo/carrito';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-carrito-listar',
   standalone: true,
@@ -10,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './carrito-listar.html',
   styleUrl: './carrito-listar.css'
 })
+
 export class CarritoListar implements OnInit{
   public carritoService = inject(CarritoService);
   listCarrito: Carrito[]=[];

@@ -12,7 +12,7 @@
                 <tr>
                   <th>Producto</th>
                   <th>Imagen</th>
-                  <th>Precio (S/)</th>
+                  <th>Precio (US)</th>
                   <th>Cantidad</th>
                   <th>Importe (S/)</th>
                   <th>Acción</th>
@@ -23,20 +23,15 @@
                   <tr>
                     <td>{{item.producto.nombre}}</td>
                     <td>
-                      <img [src]="'/img/' +  item.producto.imagen"
-                      width="50" height="60" />
+                      <img [src]="'/img/' +  item.producto.imagen" width="50" height="60" />
                    </td>
                     <td>{{item.producto.precio  | number: '1.2-2'}}</td>
                     <td>
-                      <input type="number" class="form-control"
-                      [(ngModel)]="item.cantidad" min="1"
-                      (change)="actualizar(item,$index)"
-                      (keydown)="onKeyDown($event)">
+                      <input type="number" class="form-control" [(ngModel)]="item.cantidad" min="1" (change)="actualizar(item,$index)" (keydown)="onKeyDown($event)">
                     </td>
                     <td>{{(item.producto.precio * item.cantidad)  | number: '1.2-2'}}</td>
                     <td>
-                      <button (click)="eliminarItem($index)"
-                      type="button" class="btn btn-danger btn-sm">
+                      <button (click)="eliminarItem($index)" type="button" class="btn btn-danger btn-sm">
                         <i class="fa fa-trash"></i>
                       </button>
                     </td>
@@ -66,8 +61,7 @@
               <p class="mb-2">S/{{carritoService.total() | number: '1.2-2' }}</p>
             </div>
 
-            <button [disabled]="listCarrito.length == 0"
-            type="button" class="btn btn-dark btn-block btn-lg">
+            <button [disabled]="listCarrito.length == 0" type="button" class="btn btn-dark btn-block btn-lg">
               <div class="d-flex justify-content-between">
                 <span>PROCESAR</span>
               </div>
